@@ -1,5 +1,4 @@
-#!/usr/bin/env
-
+#!/bin/bash
 function run_terraform(){
     sudo packer build packer.json
     terraform init
