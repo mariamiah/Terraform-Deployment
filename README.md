@@ -15,7 +15,7 @@ Install Terraform on your local computer using a numnber of methods listed below
     brew install terraform
 - Linux
 
-    Obtain a terraform link address from [terraform](https://www.terraform.io/)website
+    Obtain a terraform link address from [terraform](https://www.terraform.io/) website
 
     Download terraform using wget <link address>
 
@@ -23,7 +23,7 @@ Install Terraform on your local computer using a numnber of methods listed below
 
     Install terraform using sudo snap install terraform
 #### Running this module manually
- - Sign up for AWS.
+ - Sign up for [AWS](https://aws.amazon.com/).
  
  - Configure your AWS credentials using one of the supported methods for AWS CLI tools, such as setting the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables. If you're using the ~/.aws/config file for profiles then export AWS_SDK_LOAD_CONFIG as "True".
  
