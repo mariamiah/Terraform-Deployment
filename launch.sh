@@ -1,6 +1,6 @@
 #!/bin/bash
 function run_terraform(){
-    sudo packer build packer.json
+    packer build packer.json
     terraform init
     terraform plan
     terraform apply
