@@ -1,4 +1,3 @@
-
 resource "aws_security_group" "allow_specific" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
