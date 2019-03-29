@@ -1,5 +1,5 @@
 
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "allow_specific" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
 
@@ -29,6 +29,9 @@ resource "aws_security_group" "allow_tls" {
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags {
+      Name="allow_specific"
   }
 }
 
