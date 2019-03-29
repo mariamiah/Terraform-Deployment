@@ -28,11 +28,37 @@ resource "aws_instance" "storeTerraform" {
     Name = "storeTerraform"
   }
 }
+resource "aws_vpc" "default" {
+  cidr_block = "${var.vpc_cidr}"
+  enable_dns_hostnames = true
 
+  tags {
+    Name = "store-vpc"
+  }
+}
+resource "aws_subnet" "public-subnet" {
+  vpc_id = "${aws_vpc.default.id}"
+  cidr_block = "${var.public_subnet_cidr}"
+  availability_zone = "eu-west-2a"
 
+  tags {
+    Name = "Web Public Subnet"
+  }
+}
 
+resource "aws_subnet" "private-subnet" {
+  vpc_id = "${aws_vpc.default.id}"
+  cidr_block = "${var.private_subnet_cidr}"
+  availability_zone = "eu-west-2b"
 
+  tags {
+    Name = "Database Private Subnet"
+  }
+}
+resource "aws_internet_gateway" "gw" {
+  vpc_id = "${aws_vpc.default.id}"
 
-
-
-
+  tags {
+    Name = "VPC IGW"
+  }
+}
