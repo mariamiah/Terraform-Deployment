@@ -1,4 +1,4 @@
-#### AutoDeploy Application using Terraform.
+## AutoDeploy Application using Terraform.
 Introduction
 The aim of this project is to automatically set up an AWS Instance onto which an AMI containing the Node Application is going to run
 
