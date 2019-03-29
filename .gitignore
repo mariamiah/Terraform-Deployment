@@ -8,3 +8,4 @@
 
 # Sensitive Files
 /variables.tf
+.terraform.tfstate.lock.info

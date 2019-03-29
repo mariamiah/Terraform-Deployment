@@ -30,10 +30,6 @@ resource "aws_security_group" "allow_tls" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags {
-    Name = "allow_all"
-  }
 }
 
 
